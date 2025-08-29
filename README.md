@@ -10,4 +10,4 @@ Test your General Knowledge with interactive quizzes powered by a trivia API, al
 - ⏳ **Timer & Progress Bar** – Keeps track of time and quiz progress  
 - ✅ **Instant Feedback** – Highlights correct (green) and wrong (red) answers instantly  
 - 🏆 **Score Summary Screen** – Displays results with retry option  
-- 🎨 **Modern Design** – White & blue theme with optional cyan highlights, responsive layout, and smooth animations  
+- 🎨 **Modern Design** – Pacific & linen theme with optional cyan highlights, responsive layout, and smooth animations  
