@@ -11,3 +11,5 @@ Test your General Knowledge with interactive quizzes powered by a trivia API, al
 - ✅ **Instant Feedback** – Highlights correct (green) and wrong (red) answers instantly  
 - 🏆 **Score Summary Screen** – Displays results with retry option  
 - 🎨 **Modern Design** – Pacific & linen theme with optional cyan highlights, responsive layout, and smooth animations  
+
+🔗 [Live Demo](https://mdzafar99.github.io/BeQuizy/)
