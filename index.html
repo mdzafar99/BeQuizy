@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeQuizy - Indian GK Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div id="splash-screen" class="screen active">
+        <div class="splash-content">
+            <h1 class="app-title">BeQuizy</h1>
+            <div class="splash-loader">
+                <div class="loader-dot"></div>
+                <div class="loader-dot"></div>
+                <div class="loader-dot"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start Screen -->
+    <div id="start-screen" class="screen">
+        <div class="container">
+            <header class="app-header">
+                <h1 class="app-title">BeQuizy</h1>
+                <p class="app-subtitle">Indian General Knowledge Quiz</p>
+            </header>
+            
+            <div class="start-content">
+                <div class="welcome-text">
+                    <h2>Test Your Knowledge!</h2>
+                    <p>Challenge yourself with exciting questions about India's rich culture, history, and general knowledge.</p>
+                </div>
+                
+                <div class="start-buttons">
+                    <button id="start-quiz-btn" class="btn btn-primary">
+                        <span>Start Quiz</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="5,3 19,12 5,21"></polygon>
+                        </svg>
+                    </button>
+                    
+                    <button id="how-it-works-btn" class="btn btn-secondary">
+                        <span>How It Works</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>&copy; 2025 BeQuizy</p>
+            <p>Made with ❤️ by MD ZAFAR</p>
+        </footer>
+    </div>
+
+    <!-- How It Works Modal -->
+    <div id="how-it-works-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>How It Works</h3>
+                <button id="close-modal" class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="instruction">
+                    <div class="instruction-icon">1</div>
+                    <div class="instruction-text">
+                        <h4>Answer Questions</h4>
+                        <p>You'll get 10 multiple-choice questions about Indian general knowledge.</p>
+                    </div>
+                </div>
+                <div class="instruction">
+                    <div class="instruction-icon">2</div>
+                    <div class="instruction-text">
+                        <h4>Beat the Timer</h4>
+                        <p>Each question has a 10-second timer. Answer before time runs out!</p>
+                    </div>
+                </div>
+                <div class="instruction">
+                    <div class="instruction-icon">3</div>
+                    <div class="instruction-text">
+                        <h4>Get Your Score</h4>
+                        <p>See your final score and review correct answers at the end.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div id="quiz-screen" class="screen">
+        <div class="container">
+            <div class="quiz-header">
+                <div class="quiz-progress">
+                    <div class="progress-bar">
+                        <div id="progress-fill" class="progress-fill"></div>
+                    </div>
+                    <span id="question-counter" class="question-counter">1 / 10</span>
+                </div>
+                
+                <div class="quiz-timer">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12,6 12,12 16,14"></polyline>
+                    </svg>
+                    <span id="timer" class="timer">30</span>
+                </div>
+            </div>
+
+            <div class="quiz-content">
+                <div id="question-container" class="question-container">
+                    <h2 id="question-text" class="question-text"></h2>
+                    
+                    <div id="options-container" class="options-container">
+                        <!-- Options will be dynamically generated -->
+                    </div>
+                </div>
+
+                <div id="feedback-container" class="feedback-container hidden">
+                    <div id="feedback-message" class="feedback-message"></div>
+                    <button id="next-question-btn" class="btn btn-primary">Next Question</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Screen -->
+    <div id="results-screen" class="screen">
+        <div class="container">
+            <div class="results-content">
+                <div class="results-header">
+                    <h2>Quiz Complete!</h2>
+                    <div id="score-display" class="score-display">
+                        <div class="score-circle">
+                            <span id="score-percentage">0%</span>
+                        </div>
+                        <p id="score-text">You scored 0 out of 10</p>
+                    </div>
+                </div>
+
+                <div id="results-details" class="results-details">
+                    <!-- Results will be dynamically generated -->
+                </div>
+
+                <div class="results-actions">
+                    <button id="retry-quiz-btn" class="btn btn-primary">
+                        <span>Try Again</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M1 4v6h6"></path>
+                            <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+                        </svg>
+                    </button>
+                    
+                    <button id="home-btn" class="btn btn-secondary">
+                        <span>Home</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9,22 9,12 15,12 15,22"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p>Loading questions...</p>
+        </div>
+    </div>
+
+    <!-- Error Screen -->
+    <div id="error-screen" class="screen">
+        <div class="error-content">
+            <div class="error-icon">⚠️</div>
+            <h2>Oops! Something went wrong</h2>
+            <p id="error-message">Failed to load quiz questions. Please check your internet connection and try again.</p>
+            <button id="retry-btn" class="btn btn-primary">Try Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
