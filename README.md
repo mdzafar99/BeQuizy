@@ -1,6 +1,6 @@
-# BeQuizy ❓🎯  
+# BeQuizy 🧠
 
-![Image](https://github.com/user-attachments/assets/125d5150-aec6-4991-bd32-94b5e03ccb47)
+![Image](https://github.com/user-attachments/assets/cefe5b20-c001-4cc7-bf69-3a3a373683b5)
 
 A modern and responsive **Quiz Web App** built with **HTML, CSS, and JavaScript**.  
 Test your General Knowledge with interactive quizzes powered by a trivia API, all in a clean and engaging UI.  
